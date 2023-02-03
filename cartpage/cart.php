@@ -47,7 +47,7 @@ session_start();
                 foreach($_SESSION['cart'] as $key => $value)
                 {
                   $sr=$key+1;
-                  $total=$total+$value['Price'];
+                  $total=$total+($value['Price']*$value['Quantity']);
                   echo"
                     <tr>
                       <td>$sr</td>
